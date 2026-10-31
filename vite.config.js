@@ -5,11 +5,13 @@ import FullReload from 'vite-plugin-full-reload';
 
 export default defineConfig({
   root: 'src',
+  base: '/YourEnergy/',
   build: {
+    outDir: '../dist',
+    emptyOutDir: true,
     rollupOptions: {
       input: globSync('./src/*.html'),
     },
-    outDir: '../dist',
   },
   plugins: [
     injectHTML(),
