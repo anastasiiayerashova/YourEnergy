@@ -13,19 +13,163 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
     />
     <title>YourEnergy</title>
-    <script type="module" crossorigin src="/YourEnergy/assets/index-tbXmgzsc.js"></script>
-    <link rel="stylesheet" crossorigin href="/YourEnergy/assets/index-DSPon1Lv.css">
+    <script type="module" crossorigin src="/YourEnergy/assets/index-Ce-8um7e.js"></script>
+    <link rel="stylesheet" crossorigin href="/YourEnergy/assets/index-CSM1SIF0.css">
   </head>
   <body>
     <header>
       <div class="container">
-  <div class="container-header">
-    <a class="logo" href="./index.html">
+  <div class="header-container" id="header__top">
+    <!-- Logo -->
+
+    <a class="logo" href="./index.html" aria-label="YourEnergy App">
       <svg width="132" height="24">
-        <use href="/YourEnergy/assets/sprite-BxQKN9L1.svg#logo-icon"></use>
+        <use href="/YourEnergy/assets/sprite-B8t-Yz3V.svg#logo-icon"></use>
       </svg>
-      <span class="logo-text visually-hidden">YourEnergy</span>
     </a>
+
+    <!-- Desktop Navigation -->
+
+    <nav class="nav" aria-label="Main navigation">
+      <a id="homeButton" class="nav-btn" href="./index.html">Home</a>
+      <a id="favoritesButton" class="nav-btn" href="./favorites.html"
+        >Favorites</a
+      >
+    </nav>
+
+    <!-- Social Links -->
+
+    <ul class="socials-list">
+      <li class="socials-item">
+        <a
+          href="https://www.facebook.com/goITclub/"
+          class="socials-item-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <svg class="socials-link-icon" width="7" height="17">
+            <use href="/YourEnergy/assets/sprite-B8t-Yz3V.svg#facebook-icon"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="socials-item">
+        <a
+          href="https://www.instagram.com/goitclub/"
+          class="socials-item-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <svg class="socials-link-icon" width="28" height="28">
+            <use href="/YourEnergy/assets/sprite-B8t-Yz3V.svg#instagram-icon"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="socials-item">
+        <a
+          href="https://www.youtube.com/c/GoIT"
+          class="socials-item-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Youtube"
+        >
+          <svg class="socials-link-icon" width="28" height="28">
+            <use href="/YourEnergy/assets/sprite-B8t-Yz3V.svg#youtube-icon"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Open Mobile Menu Button -->
+
+    <button
+      type="button"
+      aria-label="Open mobile menu"
+      aria-controls="mob-menu"
+      class="open-menu-btn js-open-menu-btn"
+    >
+      <svg
+        width="32"
+        height="32"
+        stroke="var(--black-color)"
+        aria-controls="mob-menu"
+      >
+        <use href="/YourEnergy/assets/sprite-B8t-Yz3V.svg#icon-align-justify"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- ==================== MOBILE MENU ==================== -->
+
+<div class="overlay is-hidden" data-overlay>
+  <div class="overlay-container" id="mob-menu">
+    <!-- Close Mobile Menu Button -->
+
+    <button type="button" class="close-menu-btn js-close-menu-btn">
+      <svg width="32" height="32">
+        <use href="/YourEnergy/assets/sprite-B8t-Yz3V.svg#icon-x-close"></use>
+      </svg>
+    </button>
+
+    <!-- Mobile Navigation -->
+
+    <nav class="mob-menu-nav" aria-label="Mobile menu navigation">
+      <ul class="mob-menu-nav-list">
+        <li class="mob-menu-nav-item">
+          <a class="mob-menu-nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="mob-menu-nav-item">
+          <a class="mob-menu-nav-link" href="./favorites.html">Favorites</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Social Links -->
+
+    <ul class="mob-menu-socials-list">
+      <li class="mob-menu-socials-item">
+        <a
+          class="mob-menu-socials-link"
+          href="https://www.facebook.com/goITclub/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <svg class="mob-menu-socials-icon" width="7" height="17">
+            <use href="/YourEnergy/assets/sprite-B8t-Yz3V.svg#facebook-icon"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="mob-menu-socials-item">
+        <a
+          class="mob-menu-socials-link"
+          href="https://www.instagram.com/goitclub/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <svg class="mob-menu-socials-icon" width="28" height="28">
+            <use href="/YourEnergy/assets/sprite-B8t-Yz3V.svg#instagram-icon"></use>
+          </svg>
+        </a>
+      </li>
+
+      <li class="mob-menu-socials-item">
+        <a
+          class="mob-menu-socials-link"
+          href="https://www.youtube.com/c/GoIT"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Youtube"
+        >
+          <svg class="mob-menu-socials-icon" width="28" height="28">
+            <use href="/YourEnergy/assets/sprite-B8t-Yz3V.svg#youtube-icon"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
 
