@@ -1,4 +1,216 @@
-.header_logo {
-  font-size: 20px;
-  color: var(--yellow-color);
+body.no-scroll {
+  overflow: hidden;
+}
+
+.header-container {
+  padding: 20px 20px 80px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: none;
+}
+
+.nav-btn {
+  color: var(--white-color);
+  line-height: 1.5em;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 30px;
+  padding: 6px 12px;
+  transition:
+    color 750ms cubic-bezier(0.3, 0, 0.5, 1),
+    background-color 750ms cubic-bezier(0.3, 0, 0.5, 1);
+}
+
+.nav-btn:hover:not(.active) {
+  color: var(--black-color);
+  background-color: var(--white-color);
+}
+
+.active {
+  cursor: pointer;
+  color: var(--black-color);
+  background-color: var(--white-color);
+}
+
+.socials-list {
+  display: none;
+}
+
+.open-menu-btn {
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  border: none;
+}
+
+/* ==================== TABLET (>= 768px) ==================== */
+
+@media screen and (min-width: 768px) {
+  .header-container {
+    padding: 24px 32px 100px 32px;
+  }
+
+  .nav {
+    background-color: var(--black-color);
+    padding: 8px 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    width: 233px;
+    border-radius: 60px;
+  }
+
+  .socials-list {
+    display: flex;
+    gap: 12px;
+  }
+
+  .socials-item-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+    border: 1px solid rgba(36, 36, 36, 0.1);
+    border-radius: 10px;
+    transition: background-color 750ms cubic-bezier(0.3, 0, 0.5, 1);
+  }
+
+  .socials-item-link:hover,
+  .socials-item-link:focus {
+    background-color: var(--grey-icons-color);
+  }
+
+  .socials-link-icon {
+    fill: var(--grey-icons-color);
+    transition:
+      fill 750ms cubic-bezier(0.3, 0, 0.5, 1),
+      stroke 750ms cubic-bezier(0.3, 0, 0.5, 1);
+  }
+
+  .socials-item-link:hover .socials-link-icon,
+  .socials-item-link:focus .socials-link-icon {
+    stroke: var(--white-color);
+    fill: var(--white-color);
+  }
+
+  .open-menu-btn {
+    display: none;
+  }
+}
+
+/* ==================== DESKTOP (>= 1440px) ==================== */
+
+@media screen and (min-width: 1440px) {
+  .header-container {
+    padding: 28px 32px 96px 32px;
+  }
+
+  .nav {
+    width: 265px;
+  }
+}
+
+/* ==================== MOBILE MENU / OVERLAY ==================== */
+
+.overlay {
+  background-color: rgba(18, 20, 23, 0.4);
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transition:
+    opacity 400ms cubic-bezier(0.3, 0, 0.5, 1),
+    visibility 400ms cubic-bezier(0.3, 0, 0.5, 1);
+}
+
+.overlay.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.overlay-container {
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: var(--black-color);
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  padding: 20px 20px 20px 20px;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay-container.is-open {
+  transform: translateX(0);
+}
+
+.close-menu-btn {
+  stroke: var(--white-color);
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  right: 20px;
+  padding: 0;
+  outline: transparent;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.mob-menu-nav {
+  margin: auto 0;
+}
+
+.mob-menu-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.mob-menu-nav-link {
+  color: var(--white-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.125em;
+}
+
+.mob-menu-socials-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 12px;
+}
+
+.mob-menu-socials-link {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(244, 244, 244, 0.1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.mob-menu-socials-icon {
+  fill: var(--white-color);
 }
