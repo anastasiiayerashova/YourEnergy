@@ -82,8 +82,7 @@ body.no-scroll {
     transition: background-color 750ms cubic-bezier(0.3, 0, 0.5, 1);
   }
 
-  .socials-item-link:hover,
-  .socials-item-link:focus {
+  .socials-item-link:hover {
     background-color: var(--grey-icons-color);
   }
 
@@ -94,8 +93,7 @@ body.no-scroll {
       stroke 750ms cubic-bezier(0.3, 0, 0.5, 1);
   }
 
-  .socials-item-link:hover .socials-link-icon,
-  .socials-item-link:focus .socials-link-icon {
+  .socials-item-link:hover .socials-link-icon {
     stroke: var(--white-color);
     fill: var(--white-color);
   }
