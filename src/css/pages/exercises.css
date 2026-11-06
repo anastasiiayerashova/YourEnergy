@@ -1,4 +1,4 @@
-.text-container {
+.exercises-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -50,7 +50,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .text-container {
+  .exercises-container {
     gap: 32px;
   }
 
@@ -67,7 +67,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .text-container {
+  .exercises-container {
     gap: 0px;
     flex-direction: row;
     justify-content: space-between;
