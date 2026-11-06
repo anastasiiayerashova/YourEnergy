@@ -13,6 +13,21 @@
   font-style: normal;
 }
 
+.buttons-list {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 0 0 4px 0;
+  border: none;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  color: rgba(36, 36, 36, 0.6);
+}
+
 @media screen and (min-width: 768px) {
   .text-container {
     gap: 32px;
