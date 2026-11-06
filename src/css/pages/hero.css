@@ -126,6 +126,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
     gap: 32px;
   }
 
@@ -141,5 +142,10 @@
 
   .lower-hashtags-part {
     display: none;
+  }
+
+  .hashtags-list {
+    flex-wrap: wrap;
+    width: 197px;
   }
 }
