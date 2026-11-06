@@ -18,7 +18,7 @@
   gap: 20px;
 }
 
-.btn {
+.exercises-btn {
   padding: 0 0 4px 0;
   border: none;
   background-color: transparent;
@@ -26,6 +26,27 @@
   font-size: 14px;
   line-height: 1.43;
   color: rgba(36, 36, 36, 0.6);
+}
+
+.exercises-btn.active {
+  position: relative;
+  transition: color 0.3s ease;
+  color: var(--color-black);
+}
+
+.exercises-btn:hover {
+  color: var(--color-black);
+}
+
+.exercises-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(36, 36, 36, 1);
+  border-radius: 2px;
 }
 
 @media screen and (min-width: 768px) {
@@ -37,6 +58,11 @@
     line-height: 1.09;
     letter-spacing: -0.88px;
     font-size: 44px;
+  }
+
+  .exercises-btn {
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
 
