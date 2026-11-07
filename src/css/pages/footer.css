@@ -3,6 +3,11 @@
   background-color: rgba(36, 36, 36, 1);
 }
 
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-logo-container {
   display: flex;
   flex-direction: column;
@@ -45,15 +50,132 @@
   fill: rgba(36, 36, 36, 1);
 }
 
+.footer-center-part {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.footer-form-title {
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  color: var(--white-color);
+}
+
+.footer-form-title em {
+  font-style: italic;
+  font-family: inherit;
+}
+
+.footer-subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-subscribe-desc {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--white-color);
+  line-height: 1.29;
+  letter-spacing: 0px;
+}
+
+.footer-subscribe-input {
+  border-radius: 30px;
+  border: 1px solid var(--white-color);
+  padding: 12px 0 12px 14px;
+  color: rgba(244, 244, 244, 0.6);
+  font-family: inherit;
+  outline: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: 0px;
+  width: 100%;
+  background-color: transparent;
+}
+
+.footer-subscribe-input::placeholder {
+  color: rgba(244, 244, 244, 0.4);
+}
+
+.footer-subscribe-btn {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border-radius: 30px;
+  width: 100%;
+  border: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: 0px;
+  padding: 12px 0;
+}
+
 @media screen and (min-width: 768px) {
   .footer-section {
     padding: 64px 32px 16px 32px;
   }
 
+  .footer-container {
+    flex-direction: row;
+  }
+
   .footer-logo-container {
     gap: 32px;
+  }
+
+  .footer-center-part {
+    gap: 32px;
+    width: 434px;
+    margin-top: unset;
+    margin-left: auto;
+  }
+
+  .footer-form-title {
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: -0.02em;
+  }
+
+  .footer-subscribe-form {
+    width: 352px;
+  }
+
+  .footer-subscribe-desc {
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0px;
+  }
+
+  .footer-subscribe-input {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0px;
+  }
+
+  .footer-subscribe-btn {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0px;
   }
 }
 
 @media screen and (min-width: 1440px) {
+  .footer-center-part {
+    flex-direction: row;
+    gap: unset;
+    width: 100%;
+    margin-left: unset;
+    justify-content: space-between;
+  }
+
+  .footer-form-title {
+    width: 595px;
+    margin: 0 auto;
+  }
 }
