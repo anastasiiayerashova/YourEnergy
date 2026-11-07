@@ -131,6 +131,57 @@
   background-color: rgba(255, 255, 255, 1);
   border-radius: 20px;
   min-height: 201px;
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+}
+
+.quote-gym-icon-container {
+  width: 34px;
+  height: 32px;
+  background-color: var(--black-color);
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gym-icon {
+  fill: var(--white-color);
+}
+
+.quote-item-third-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.quote-item-third-number {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--black-color);
+  line-height: 1;
+}
+
+.quote-item-third-subtitle {
+  margin-bottom: 14px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  color: rgba(36, 36, 36, 0.6);
+}
+
+.quote-item-third-text {
+  color: var(--black-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -193,6 +244,16 @@
   .quote-item-third {
     width: 400px;
     min-height: 249px;
+    padding: 40px;
+  }
+
+  .quote-item-third-number {
+    font-size: 24px;
+    line-height: 1.33;
+  }
+
+  .quote-item-third-subtitle {
+    margin-bottom: 18px;
   }
 }
 
@@ -207,7 +268,6 @@
     flex-direction: column;
     gap: 32px;
     flex-wrap: nowrap;
-    row-gap: unset;
   }
 
   .quote-item {
@@ -227,5 +287,11 @@
   .quote-item-third {
     width: 444px;
     min-height: 315px;
+  }
+
+  .quote-item-third-text {
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
   }
 }
