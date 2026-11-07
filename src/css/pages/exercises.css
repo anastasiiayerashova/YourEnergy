@@ -49,6 +49,75 @@
   border-radius: 2px;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 0 0;
+}
+
+.quote-item {
+  background-color: rgba(36, 36, 36, 1);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 209px;
+}
+
+.running-man-icon-circle {
+  background-color: rgba(244, 244, 244, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 32px;
+  margin-right: 20px;
+  padding: 7px;
+}
+
+.running-man-icon {
+  fill: var(--white-color);
+}
+
+.inverted-commas-icon {
+  fill: var(--white-color);
+}
+
+.quote-author-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  /* min-width: 0;
+  flex-grow: 1; */
+}
+
+.quote-title {
+  color: rgba(244, 244, 244, 1);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.quote-text {
+  color: rgba(244, 244, 244, 0.6);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.29;
+  margin-bottom: 8px;
+}
+
+.quote-author {
+  color: rgba(244, 244, 244, 1);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.29;
+
+  margin-top: auto;
+}
+
 @media screen and (min-width: 768px) {
   .exercises-container {
     gap: 32px;
@@ -64,6 +133,35 @@
     font-size: 16px;
     line-height: 1.5;
   }
+
+  .main-container {
+    padding: 32px 0 0 0;
+  }
+
+  .quote-item {
+    width: 400px;
+    min-height: 249px;
+    padding: 40px;
+  }
+
+  .running-man-icon-circle {
+    margin-right: 16px;
+  }
+
+  .quote-author-container {
+    gap: 6px;
+  }
+
+  .quote-title {
+    font-size: 24px;
+    line-height: 1.33;
+  }
+
+  .quote-text {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -71,5 +169,14 @@
     gap: 0px;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .quote-item {
+    width: 444px;
+    min-height: 242px;
+  }
+
+  .quote-text {
+    margin-bottom: 2px;
   }
 }
