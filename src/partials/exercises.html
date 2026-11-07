@@ -34,6 +34,32 @@
             <use href="./img/sprite.svg#inverted-commas-icon"></use>
           </svg>
         </li>
+        <li class="quote-item-second">
+          <picture class="quote-item-img">
+            <source
+              media="(max-width: 767px)"
+              srcset="
+                ./img/quote-img-mob@1x.jpg 1x,
+                ./img/quote-img-mob@2x.jpg 2x
+              "
+            />
+            <source
+              media="(min-width: 768px) and (max-width: 1439px)"
+              srcset="
+                ./img/quote-img-tab@1x.jpg 1x,
+                ./img/quote-img-tab@2x.jpg 2x
+              "
+            />
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+                ./img/quote-img-desk@1x.jpg 1x,
+                ./img/quote-img-desk@2x.jpg 2x
+              "
+            />
+            <img src="./img/quote-img-mob@1x.jpg" alt="Fitness" />
+          </picture>
+        </li>
       </ul>
     </div>
     <div class="filters-container"></div>
