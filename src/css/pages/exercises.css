@@ -53,6 +53,7 @@
   display: flex;
   flex-direction: column;
   padding: 20px 0 0 0;
+  gap: 80px;
 }
 
 .quote-list {
@@ -184,6 +185,92 @@
   overflow: hidden;
 }
 
+/* Filters */
+
+.filters-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.filters-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filter-card {
+  border-radius: 12px;
+  position: relative;
+  width: 100%;
+  height: 225px;
+  border-radius: 12px;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.filter-category {
+  color: rgba(244, 244, 244, 1);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1em;
+}
+
+.filter-name {
+  color: rgba(244, 244, 244, 0.4);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.pagination-container {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.pagination-btn {
+  padding: 6px 12px;
+  color: rgba(212, 212, 212, 1);
+  border: none;
+  background-color: transparent;
+  width: 31px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.active-mode {
+  border: 1px solid var(--black-color);
+  color: var(--black-color);
+}
+
 @media screen and (min-width: 768px) {
   .exercises-container {
     gap: 32px;
@@ -202,6 +289,7 @@
 
   .main-container {
     padding: 32px 0 0 0;
+    gap: 64px;
   }
 
   .quote-list {
@@ -262,6 +350,11 @@
     gap: 0px;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .main-container {
+    gap: 32px;
+    flex-direction: row-reverse;
   }
 
   .quote-list {

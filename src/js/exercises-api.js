@@ -12,3 +12,20 @@ export async function getQuoteOfTheDay() {
     throw error;
   }
 }
+
+
+export async function fetchFilters({ filter, page = 1, limit = 12 }) {
+  try {
+    const response = await axios.get('/filters', {
+      params: {
+        filter,
+        page,
+        limit,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching filters:', error);
+    throw error;
+  }
+}

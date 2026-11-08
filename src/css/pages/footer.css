@@ -159,7 +159,6 @@
 
   .footer-container {
     flex-direction: row;
-    /* flex-wrap: wrap; */
   }
 
   .footer-logo-container {
@@ -215,6 +214,7 @@
   .footer-container {
     gap: 50px;
   }
+
   .footer-upper-part {
     display: flex;
     flex-direction: column;
