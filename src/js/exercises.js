@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Главная функция для загрузки и отрисовки данных
 async function loadFiltersData() {
   try {
     const data = await fetchFilters({
@@ -45,7 +44,7 @@ async function loadFiltersData() {
   }
 }
 
-// Слушатель кликов по кнопкам категорий (Muscles, Body parts, Equipment)
+
 if (buttonsList) {
   buttonsList.addEventListener('click', (event) => {
     const clickedButton = event.target.closest('.exercises-btn');
@@ -54,9 +53,8 @@ if (buttonsList) {
     document.querySelectorAll('.exercises-btn').forEach(btn => btn.classList.remove('active'));
     clickedButton.classList.add('active');
 
-    // Безопаснее брать значение из data-атрибута, либо textContent
     state.filter = clickedButton.dataset.filter || clickedButton.textContent.trim();
-    state.page = 1; // Сбрасываем на 1-ю страницу
+    state.page = 1;
 
     loadFiltersData();
   });

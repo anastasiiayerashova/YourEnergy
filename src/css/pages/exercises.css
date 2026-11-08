@@ -1,6 +1,7 @@
 .exercises-container {
   display: flex;
   flex-direction: column;
+  align-items: baseline;
   gap: 20px;
 }
 
@@ -192,6 +193,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  justify-content: space-between;
 }
 
 .filters-card-list {
@@ -292,6 +294,35 @@
     gap: 64px;
   }
 
+  .filters-container {
+    gap: 32px;
+  }
+
+  .filters-card-list {
+    flex-direction: row;
+    row-gap: 32px;
+    column-gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .filter-card {
+    width: 225px;
+    height: 225px;
+  }
+
+  .filter-category {
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .pagination-btn {
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    width: 32px;
+    height: 32px;
+  }
+
   .quote-list {
     flex-direction: row;
     gap: 16px;
@@ -355,6 +386,15 @@
   .main-container {
     gap: 32px;
     flex-direction: row-reverse;
+  }
+
+  .filters-card-list {
+    column-gap: 15px;
+  }
+
+  .filter-card {
+    width: 290px;
+    height: 242px;
   }
 
   .quote-list {
