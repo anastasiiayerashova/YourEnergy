@@ -241,10 +241,29 @@
   line-height: 1.5;
 }
 
-.pagination-container {
+/* .pagination-container {
   display: flex;
   gap: 8px;
   justify-content: center;
+} */
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.pagination-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  color: var(--black-color);
+  font-size: 16px;
 }
 
 .pagination-btn {

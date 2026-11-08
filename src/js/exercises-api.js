@@ -29,3 +29,26 @@ export async function fetchFilters({ filter, page = 1, limit = 12 }) {
     throw error;
   }
 }
+
+
+export async function fetchExercises({ filterName, categoryName, page = 1, limit = 10 }) {
+  const normalizedFilter = filterName.toLowerCase();
+  let params = { page, limit };
+
+  if (normalizedFilter.includes('muscle')) {
+    params.muscles = categoryName;
+  } else if (normalizedFilter.includes('body')) {
+    params.bodypart = categoryName;
+  } else if (normalizedFilter.includes('equipment')) {
+    params.equipment = categoryName;
+  }
+
+  try {
+    const response = await axios.get('/exercises', { params });
+    return response.data;
+  }
+  catch (error) {
+    console.error('Error fetching exercises:', error);
+    throw error;
+  }
+}
