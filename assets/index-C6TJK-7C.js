@@ -21,7 +21,7 @@ Caused by: `,at=Symbol("causeStack");function es(e,t){const n=a.hasOwnProp(e,at)
       ${t}
     </ul>
     <div class="pagination-container"></div>
-  `}function fo(e,t){const n=document.querySelector(".section-exercises .title");n&&(n.innerHTML=`Exercises <span class="exercises-subtitle">/ ${t}</span>`);const r=e.map(({_id:s,name:o,burnedCalories:i,bodyPart:c,target:l,rating:u})=>`
+  `}function fo(e,t){const n=document.querySelector(".section-exercises .title");n&&(n.innerHTML=`Exercises <span class="exercises-subtitle">/ ${t}</span>`);const r=e.map(({_id:s,burnedCalories:o,name:i,bodyPart:c,target:l,rating:u})=>`
       <li class="exercise-card" data-id="${s}">
         <div class="exercise-card-header">
           <div class="exercise-card-badge">WORKOUT</div>
@@ -34,11 +34,11 @@ Caused by: `,at=Symbol("causeStack");function es(e,t){const n=a.hasOwnProp(e,at)
           </button>
         </div>
         <div class="exercise-card-body">
-          <div class="exercise-icon-container">🏃‍♂️</div>
-          <h3 class="exercise-name">${o}</h3>
+          <div class="exercise-icon-container">🏃‍♂️🏃‍♂️</div>
+          <h3 class="exercise-name">${i}</h3>
         </div>
         <div class="exercise-card-footer">
-          <p class="exercise-info">Burned calories: <span>${i} / ...</span></p>
+          <p class="exercise-info">Burned calories: <span>${o} / ...</span></p>
           <p class="exercise-info">Body part: <span>${c}</span></p>
           <p class="exercise-info">Target: <span>${l}</span></p>
         </div>
