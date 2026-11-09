@@ -53,6 +53,7 @@
 .main-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 20px 0 0 0;
   gap: 80px;
 }

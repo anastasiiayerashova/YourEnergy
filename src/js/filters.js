@@ -32,7 +32,7 @@ export function renderExercises(results, categoryTitle) {
 
   const markup = results
     .map(
-      ({ _id, burnedCalories, name, bodyPart, target, rating }) => `
+      ({ _id, burnedCalories, time, name, bodyPart, target, rating }) => `
       <li class="exercise-card" data-id="${_id}">
         <div class="exercise-card-header">
           <div class="exercise-card-header-workout">
@@ -57,7 +57,7 @@ export function renderExercises(results, categoryTitle) {
           <h3 class="exercise-name">${name.charAt(0).toUpperCase() + name.slice(1)}</h3>
         </div>
         <div class="exercise-card-footer">
-          <p class="exercise-info">Burned calories: <span>${burnedCalories}</span></p>
+          <p class="exercise-info">Burned calories: <span>${burnedCalories} / ${time} min</span></p>
           <p class="exercise-info">Body part: <span>${bodyPart.charAt(0).toUpperCase() + bodyPart.slice(1)}</span></p>
           <p class="exercise-info">Target: <span>${target.charAt(0).toUpperCase() + target.slice(1)}</span></p>
         </div>
