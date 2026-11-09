@@ -1,6 +1,7 @@
 import { fetchExercises, fetchFilters } from './exercises-api.js';
 import { renderFilters, renderExercises, renderPagination } from './filters.js';
 
+
 const state = {
   filter: 'Muscles',
   page: 1,
@@ -89,24 +90,10 @@ if (buttonsList) {
   });
 }
 
-// if (filtersContainer) {
-//   filtersContainer.addEventListener('click', (event) => {
-//     const pageButton = event.target.closest('.pagination-btn');
-//     if (!pageButton) return;
-
-//     state.page = Number(pageButton.dataset.page);
-//     loadFiltersData();
-
-//     if (sectionExercises) {
-//       sectionExercises.scrollIntoView({ behavior: 'smooth' });
-//     }
-//   });
-// }
-
 
 if (filtersContainer) {
   filtersContainer.addEventListener('click', (event) => {
-    // Клик по карточке категории -> переходим к списку упражнений
+    // Клік по картка категорії -> переходимо до loadExercisesData
     const filterCard = event.target.closest('.filter-card');
     if (filterCard) {
       const nameElement = filterCard.querySelector('.filter-name');

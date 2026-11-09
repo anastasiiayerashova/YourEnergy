@@ -1,5 +1,6 @@
 const filtersContainer = document.querySelector('.filters-container');
 
+
 export function renderFilters(results) {
   const markup = results
     .map(
@@ -31,7 +32,7 @@ export function renderExercises(results, categoryTitle) {
 
   const markup = results
     .map(
-      ({ _id, name, burnedCalories, bodyPart, target, rating }) => `
+      ({ _id, burnedCalories, name, bodyPart, target, rating }) => `
       <li class="exercise-card" data-id="${_id}">
         <div class="exercise-card-header">
           <div class="exercise-card-badge">WORKOUT</div>
@@ -44,7 +45,7 @@ export function renderExercises(results, categoryTitle) {
           </button>
         </div>
         <div class="exercise-card-body">
-          <div class="exercise-icon-container">🏃‍♂️</div>
+          <div class="exercise-icon-container">🏃‍♂️🏃‍♂️</div>
           <h3 class="exercise-name">${name}</h3>
         </div>
         <div class="exercise-card-footer">
@@ -66,28 +67,11 @@ export function renderExercises(results, categoryTitle) {
 }
 
 
-// export function renderPagination(totalPages, currentPage) {
-//   const paginationContainer = document.querySelector('.pagination-container');
-//   if (!paginationContainer) return;
-
-//   let paginationMarkup = '';
-//   for (let i = 1; i <= totalPages; i++) {
-//     paginationMarkup += `
-//       <button class="pagination-btn ${currentPage === i ? 'active-mode' : ''}" type="button" data-page="${i}">
-//         ${i}
-//       </button>
-//     `;
-//   }
-
-//   paginationContainer.innerHTML = paginationMarkup;
-// }
-
-
 export function renderPagination(totalPages, currentPage) {
   const paginationContainer = document.querySelector('.pagination-container');
   if (!paginationContainer) return;
 
-  // Если всего 1 страница или меньше, пагинация не нужна
+  // Якщо лише 1 сторінка або менше, пагінація не потрібна
   if (totalPages <= 1) {
     paginationContainer.innerHTML = '';
     return;
@@ -95,7 +79,7 @@ export function renderPagination(totalPages, currentPage) {
 
   let paginationMarkup = '';
 
-  // Функция для создания кнопки
+  // Функція створення кнопки
   const createBtn = (page, isActive = false, isDisabled = false) => `
     <button class="pagination-btn ${isActive ? 'active-mode' : ''}"
             type="button"
@@ -105,16 +89,16 @@ export function renderPagination(totalPages, currentPage) {
     </button>
   `;
 
-  // Логика умного отображения страниц
+  // Логіка розумного відображення сторінок
   let pages = [];
 
   if (totalPages <= 7) {
-    // Если страниц мало (до 7), показываем все
+    // Якщо сторінок мало (до 7), показуємо все
     for (let i = 1; i <= totalPages; i++) {
       pages.push(i);
     }
   } else {
-    // Если страниц много, показываем первую, последнюю, текущую и соседей
+    // Якщо сторінок багато, показуємо першу, останню, поточну та сусідів
     if (currentPage <= 4) {
       pages = [1, 2, 3, 4, 5, '...', totalPages];
     } else if (currentPage >= totalPages - 3) {
@@ -124,7 +108,7 @@ export function renderPagination(totalPages, currentPage) {
     }
   }
 
-  // Собираем разметку
+  // Збираємо розмітку
   paginationMarkup = pages.map(page => {
     if (page === '...') {
       return `<span class="pagination-dots">...</span>`;
