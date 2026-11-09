@@ -35,23 +35,31 @@ export function renderExercises(results, categoryTitle) {
       ({ _id, burnedCalories, name, bodyPart, target, rating }) => `
       <li class="exercise-card" data-id="${_id}">
         <div class="exercise-card-header">
-          <div class="exercise-card-badge">WORKOUT</div>
-          <div class="exercise-card-rating">
-            <span>${rating.toFixed(1)}</span>
-            <span class="star-icon">⭐</span>
+          <div class="exercise-card-header-workout">
+            <div class="exercise-card-badge">WORKOUT</div>
+            <div class="exercise-card-rating">
+              <span>${rating.toFixed(1)}</span>
+              <svg width="12" height="12" class="exercise-star-icon">
+                <use href="./img/sprite.svg#star-icon"></use>
+              </svg>
+            </div>
           </div>
           <button class="exercise-start-btn" type="button">
-            Start <svg width="16" height="16"><use href="./img/sprite.svg#arrow-right"></use></svg>
+            Start <svg width="16" height="16" class="arrow-icon-exercises-catalog"><use href="./img/sprite.svg#arrow-icon-exercises-catalog"></use></svg>
           </button>
         </div>
         <div class="exercise-card-body">
-          <div class="exercise-icon-container">🏃‍♂️🏃‍♂️</div>
-          <h3 class="exercise-name">${name}</h3>
+          <div class="exercise-icon-container">
+            <svg width="18" height="20" class="exercise-running-man-icon">
+              <use href="./img/sprite.svg#running-man-icon"></use>
+            </svg>
+          </div>
+          <h3 class="exercise-name">${name.charAt(0).toUpperCase() + name.slice(1)}</h3>
         </div>
         <div class="exercise-card-footer">
-          <p class="exercise-info">Burned calories: <span>${burnedCalories} / ...</span></p>
-          <p class="exercise-info">Body part: <span>${bodyPart}</span></p>
-          <p class="exercise-info">Target: <span>${target}</span></p>
+          <p class="exercise-info">Burned calories: <span>${burnedCalories}</span></p>
+          <p class="exercise-info">Body part: <span>${bodyPart.charAt(0).toUpperCase() + bodyPart.slice(1)}</span></p>
+          <p class="exercise-info">Target: <span>${target.charAt(0).toUpperCase() + target.slice(1)}</span></p>
         </div>
       </li>
     `

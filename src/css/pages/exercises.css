@@ -292,6 +292,140 @@
   color: var(--black-color);
 }
 
+/* Exercises reversed cards*/
+
+.exercises-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.exercise-card {
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 16px;
+}
+
+.exercise-card-header {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.exercise-card-header-workout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+}
+
+.exercise-card-badge {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--black-color);
+  padding: 5px 8px;
+  border: 1px solid var(--black-color);
+  border-radius: 15px;
+}
+
+.exercise-card-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.exercise-card-rating span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: var(--black-color);
+}
+
+.exercise-star-icon {
+  fill: var(--yellow-color);
+}
+
+.exercise-start-btn {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.287;
+  letter-spacing: normal;
+  color: var(--black-color);
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.arrow-icon-exercises-catalog {
+  stroke: var(--black-color);
+}
+
+.exercise-card-body {
+  display: flex;
+  margin-bottom: 16px;
+  gap: 16px;
+  align-items: center;
+}
+
+.exercise-icon-container {
+  background-color: var(--black-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+}
+
+.exercise-running-man-icon {
+  fill: var(--white-color);
+}
+
+.exercise-name {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: normal;
+  color: var(--black-color);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  height: stretch;
+}
+
+.exercise-card-footer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.exercise-info {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: rgba(36, 36, 36, 0.4);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.exercise-info span {
+  color: var(--black-color);
+}
+
 @media screen and (min-width: 768px) {
   .exercises-container {
     gap: 32px;
@@ -393,6 +527,33 @@
   .quote-item-third-subtitle {
     margin-bottom: 18px;
   }
+
+  /*Exercises card list*/
+
+  .exercise-card {
+    width: 344px;
+  }
+
+  .exercises-card-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 32px;
+  }
+
+  .exercise-start-btn {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .exercise-card-body {
+    margin-bottom: 8px;
+  }
+
+  .exercise-name {
+    font-size: 24px;
+    line-height: 1.333;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -409,6 +570,7 @@
 
   .filters-card-list {
     column-gap: 15px;
+    justify-content: end;
   }
 
   .filter-card {
@@ -445,5 +607,15 @@
     display: block;
     -webkit-line-clamp: unset;
     overflow: visible;
+  }
+
+  /* Exercises card list*/
+
+  .exercise-card {
+    width: 442px;
+  }
+
+  .exercise-card-footer {
+    gap: 16px;
   }
 }
