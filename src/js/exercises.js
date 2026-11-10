@@ -1,5 +1,6 @@
 import { fetchExercises, fetchFilters } from './exercises-api.js';
 import { renderFilters, renderExercises, renderPagination } from './filters.js';
+import { initSearch } from './search.js';
 
 
 const state = {
@@ -15,8 +16,15 @@ const state = {
 const buttonsList = document.querySelector('.buttons-list');
 const filtersContainer = document.querySelector('.filters-container');
 const sectionExercises = document.querySelector('.section-exercises');
+const searchFormContainer = document.querySelector('.exercises-search-form-container');
 
 document.addEventListener('DOMContentLoaded', () => {
+  initSearch(state);
+
+  if (searchFormContainer) {
+    searchFormContainer.style.display = 'none';
+  }
+
   const exercisesBtns = document.querySelectorAll('.exercises-btn');
 
   exercisesBtns.forEach(btn => {
@@ -81,6 +89,12 @@ if (buttonsList) {
     state.currentView = 'filters';
     state.selectedCategory = null;
 
+    if (searchFormContainer) {
+      searchFormContainer.style.display = 'none';
+    }
+    const searchInput = document.querySelector('.search-input');
+    if (searchInput) searchInput.value = '';
+
     const titleElement = document.querySelector('.section-exercises .title');
     if (titleElement) {
       titleElement.innerHTML = 'Exercises';
@@ -102,6 +116,10 @@ if (filtersContainer) {
       state.selectedCategory = nameElement.textContent.trim();
       state.currentView = 'exercises';
       state.page = 1;
+
+      if (searchFormContainer) {
+        searchFormContainer.style.display = 'block';
+      }
 
       loadExercisesData();
 

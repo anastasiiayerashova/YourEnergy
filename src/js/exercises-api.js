@@ -32,7 +32,7 @@ export async function fetchFilters({ filter, page = 1, limit = 12 }) {
 }
 
 
-export async function fetchExercises({ filterName, categoryName, page = 1, limit = 10 }) {
+export async function fetchExercises({ filterName, categoryName, keyword = '', page = 1, limit = 10 }) {
   const normalizedFilter = filterName.toLowerCase();
   let params = { page, limit };
 
@@ -42,6 +42,10 @@ export async function fetchExercises({ filterName, categoryName, page = 1, limit
     params.bodypart = categoryName;
   } else if (normalizedFilter.includes('equipment')) {
     params.equipment = categoryName;
+  }
+
+  if (keyword.trim() != '') {
+    params.keyword = keyword.trim();
   }
 
   try {
