@@ -46,10 +46,14 @@
           <source
             media="(max-width: 767px)"
             srcset="./img/hero-img-mob@1x.jpg 1x, ./img/hero-img-mob@2x.jpg 2x"
+            width="335"
+            height="460"
           />
           <source
             media="(min-width: 768px) and (max-width: 1439px)"
             srcset="./img/hero-img-tab@1x.jpg 1x, ./img/hero-img-tab@2x.jpg 2x"
+            width="704"
+            height="550"
           />
           <source
             media="(min-width: 1440px)"
@@ -57,8 +61,17 @@
               ./img/hero-img-desk@1x.jpg 1x,
               ./img/hero-img-desk@2x.jpg 2x
             "
+            width="1376"
+            height="350"
           />
-          <img src="./img/hero-img-mob@1x.jpg" alt="Fitness" />
+          <img
+            src="./img/hero-img-mob@1x.jpg"
+            alt="Fitness"
+            width="335"
+            height="460"
+            fetchpriority="high"
+            loading="eager"
+          />
         </picture>
       </div>
       <div class="lower-hashtags-part">
