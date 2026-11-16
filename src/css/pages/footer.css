@@ -111,6 +111,16 @@
   color: rgba(244, 244, 244, 0.4);
 }
 
+/* Червоний border, поки введений текст не відповідає патерну */
+.footer-subscribe-input:not(:placeholder-shown):invalid {
+  border-color: #e74a3b;
+}
+
+/* Зелений, коли email правильний */
+.footer-subscribe-input:not(:placeholder-shown):valid {
+  border-color: #3cbc81;
+}
+
 .footer-subscribe-btn {
   background-color: var(--white-color);
   color: var(--black-color);
