@@ -67,5 +67,9 @@
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M14.667 25.333c5.891 0 10.667-4.776 10.667-10.667s-4.776-10.667-10.667-10.667c-5.891 0-10.667 4.776-10.667 10.667s4.776 10.667 10.667 10.667z"></path>
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M28 28l-5.8-5.8"></path>
 </symbol>
+
+<symbol id="heart-icon" viewBox="0 0 34 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.5263" d="M29.25 4.787c-1.397-1.398-3.327-2.262-5.459-2.262s-4.062 0.865-5.459 2.262l-0 0-1.489 1.487-1.487-1.487c-1.397-1.397-3.327-2.261-5.459-2.261-4.264 0-7.721 3.457-7.721 7.721 0 2.132 0.864 4.062 2.261 5.459l12.406 12.408 12.408-12.408c1.397-1.397 2.261-3.327 2.261-5.459s-0.864-4.062-2.261-5.459v0z"></path>
+</symbol>
 </defs>
 </svg>

@@ -1,0 +1,267 @@
+/* ==================== BACKDROP ==================== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(4, 4, 4, 0.4);
+  overflow-y: auto;
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ==================== MODAL ==================== */
+.modal-exercise {
+  position: relative;
+  width: 100%;
+  max-width: 335px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  margin: auto;
+  padding: 40px 20px;
+  border-radius: 20px;
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal-close-icon {
+  --color2: var(--white-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  transform: rotate(90deg);
+}
+
+/* ==================== IMAGE ==================== */
+.modal-exercise-img-wrapper {
+  width: 100%;
+  height: 258px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--grey-color);
+}
+
+.modal-exercise-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==================== TEXT ==================== */
+.modal-exercise-title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--white-color);
+}
+
+.modal-exercise-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(244, 244, 244, 0.2);
+}
+
+.modal-exercise-rating-value {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--white-color);
+}
+
+.modal-exercise-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.modal-star-icon {
+  fill: rgba(244, 244, 244, 0.2);
+}
+
+.modal-star-icon.is-active {
+  fill: var(--yellow-color);
+}
+
+.modal-exercise-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(244, 244, 244, 0.2);
+}
+
+/* .modal-exercise-details-item {
+  min-width: 52px;
+} */
+
+.modal-exercise-details-label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(244, 244, 244, 0.4);
+  font-weight: 400;
+}
+
+.modal-exercise-details-value {
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--white-color);
+  font-weight: 500;
+}
+
+.modal-exercise-desc {
+  margin-bottom: 40px;
+  font-size: 14px;
+  line-height: 1.29;
+  color: rgba(244, 244, 244, 0.6);
+  font-weight: 400;
+}
+
+/* ==================== BUTTONS ==================== */
+.modal-exercise-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-exercise-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.29;
+  font-weight: 400;
+  cursor: pointer;
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-favorites-btn {
+  border: 1px solid var(--white-color);
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+.modal-favorites-btn:hover,
+.modal-favorites-btn:focus {
+  background-color: transparent;
+  color: var(--white-color);
+}
+
+.modal-rating-btn {
+  border: 1px solid var(--white-color);
+  background-color: transparent;
+  color: var(--white-color);
+}
+
+.modal-rating-btn:hover,
+.modal-rating-btn:focus {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+/* ==================== TABLET ==================== */
+@media screen and (min-width: 768px) {
+  .modal-exercise {
+    max-width: 704px;
+    padding: 32px;
+  }
+
+  .modal-close-btn {
+    width: 28px;
+    height: 28px;
+    top: 16px;
+    right: 16px;
+  }
+
+  .modal-exercise-content {
+    display: flex;
+    gap: 32px;
+  }
+
+  .modal-exercise-img-wrapper {
+    flex-shrink: 0;
+    width: 270px;
+    height: 259px;
+    margin-bottom: 0;
+  }
+
+  .modal-exercise-info {
+    flex-grow: 1;
+  }
+
+  .modal-exercise-title {
+    font-size: 24px;
+    line-height: 1.33;
+    margin-bottom: 8px;
+  }
+
+  .modal-exercise-rating {
+    padding-bottom: 16px;
+  }
+
+  .modal-exercise-details {
+    padding: 8px 0;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .modal-exercise-desc {
+    margin-bottom: 64px;
+  }
+
+  .modal-exercise-btns {
+    flex-direction: row;
+    gap: 7px;
+  }
+
+  .modal-exercise-btn {
+    width: auto;
+  }
+}
+
+/* ==================== DESKTOP ==================== */
+@media screen and (min-width: 1440px) {
+  .modal-exercise {
+    max-width: 708px;
+  }
+}
