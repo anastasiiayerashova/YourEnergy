@@ -1,0 +1,171 @@
+/*
+  Backdrop (.modal-backdrop) і кнопка закриття (.modal-close-btn)
+  беруться з pop-up-exercises.css - тут лише сама модалка рейтингу
+*/
+
+/* ==================== MODAL ==================== */
+.modal-rating {
+  position: relative;
+  width: 100%;
+  max-width: 335px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  margin: auto;
+  padding: 40px 20px;
+  border-radius: 20px;
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+.rating-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==================== STARS ==================== */
+.rating-form-label {
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(244, 244, 244, 0.4);
+  font-weight: 400;
+}
+
+.rating-form-stars-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.rating-form-value {
+  min-width: 22px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--white-color);
+}
+
+.rating-form-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.rating-star-btn {
+  display: flex;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.rating-star-icon {
+  fill: rgba(244, 244, 244, 0.2);
+  transition:
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rating-star-btn.is-active .rating-star-icon {
+  fill: var(--yellow-color);
+}
+
+.rating-star-btn:hover .rating-star-icon,
+.rating-star-btn:focus-visible .rating-star-icon {
+  transform: scale(1.15);
+}
+
+/* ==================== FIELDS ==================== */
+.rating-form-input,
+.rating-form-textarea {
+  width: 100%;
+  border: 1px solid var(--white-color);
+  background-color: transparent;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--white-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rating-form-input {
+  margin-bottom: 10px;
+  padding: 12px 14px;
+  border-radius: 30px;
+}
+
+.rating-form-textarea {
+  height: 92px;
+  margin-bottom: 20px;
+  padding: 12px 14px;
+  border-radius: 15px;
+  resize: none;
+}
+
+.rating-form-input::placeholder,
+.rating-form-textarea::placeholder {
+  color: rgba(244, 244, 244, 0.6);
+}
+
+.rating-form-input:focus,
+.rating-form-textarea:focus {
+  border-color: var(--yellow-color);
+}
+
+/* ==================== SUBMIT ==================== */
+.rating-form-submit {
+  width: 100%;
+  padding: 12px 24px;
+  border: 1px solid var(--white-color);
+  border-radius: 30px;
+  background-color: var(--white-color);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--black-color);
+  cursor: pointer;
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rating-form-submit:hover,
+.rating-form-submit:focus {
+  background-color: transparent;
+  color: var(--white-color);
+}
+
+.rating-form-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==================== TABLET+ ==================== */
+@media screen and (min-width: 768px) {
+  .modal-rating {
+    max-width: 430px;
+    padding: 40px;
+  }
+
+  .rating-form-stars-wrapper {
+    margin-bottom: 32px;
+  }
+
+  .rating-form-input {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .rating-form-textarea {
+    height: 106px;
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .rating-form-submit {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

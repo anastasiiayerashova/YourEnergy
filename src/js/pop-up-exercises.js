@@ -1,10 +1,11 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import { fetchExerciseById } from './exercises-api.js';
+import { openRatingModal } from './pop-up-rating.js';
 
 const filtersContainer = document.querySelector('.filters-container');
 
-// Поточна вправа в модалці — знадобиться для "Add to favorites" та "Give a rating"
+// Поточна вправа в модалці - знадобиться для "Add to favorites" та "Give a rating"
 export let currentExercise = null;
 
 // ==========================================
@@ -46,9 +47,7 @@ async function onStartBtnClick(event) {
 
   try {
     const exercise = await fetchExerciseById(id);
-    currentExercise = exercise;
-    modalContent.innerHTML = createModalMarkup(exercise);
-    openModal();
+    showExerciseModal(exercise);
   }
   catch (error) {
     iziToast.error({
@@ -65,10 +64,22 @@ async function onStartBtnClick(event) {
 // ==========================================
 // 3. Відкриття / закриття
 // ==========================================
+function showExerciseModal(exercise) {
+  currentExercise = exercise;
+  modalContent.innerHTML = createModalMarkup(exercise);
+  openModal();
+}
+
 function openModal() {
   backdrop.classList.remove('is-hidden');
   document.body.classList.add('no-scroll');
   document.addEventListener('keydown', onEscPress);
+}
+
+// Тимчасово ховає модалку (без скидання currentExercise) - для переходу в модалку рейтингу
+function hideModal() {
+  backdrop.classList.add('is-hidden');
+  document.removeEventListener('keydown', onEscPress);
 }
 
 function closeModal() {
@@ -83,6 +94,24 @@ function onEscPress(event) {
 }
 
 closeBtn.addEventListener('click', closeModal);
+
+// ==========================================
+// Give a rating: ховаємо модалку вправи -> відкриваємо модалку рейтингу
+// ==========================================
+modalContent.addEventListener('click', event => {
+  if (!event.target.closest('.modal-rating-btn') || !currentExercise) return;
+
+  const exercise = currentExercise;
+  hideModal();
+
+  openRatingModal({
+    id: exercise._id,
+    // Закрили рейтинг без відправки -> повертаємось до тієї ж вправи
+    onClose: () => showExerciseModal(exercise),
+    // Рейтинг відправлено -> показуємо вправу з оновленим рейтингом
+    onSuccess: updated => showExerciseModal({ ...exercise, ...updated }),
+  });
+});
 
 // Клік по затемненню (але не по самій модалці)
 backdrop.addEventListener('click', event => {

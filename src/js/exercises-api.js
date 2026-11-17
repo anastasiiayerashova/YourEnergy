@@ -68,3 +68,14 @@ export async function fetchExerciseById(id) {
     throw error;
   }
 }
+
+export async function addExerciseRating(id, {rate, email, review}) {
+  try {
+    const response = await axios.patch(`/exercises/${id}/rating`, { rate, email, review });
+    return response.data;
+  }
+  catch (error) {
+    console.error('Error adding exercise rating by id:', error);
+    throw error;
+  }
+}

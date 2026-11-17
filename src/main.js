@@ -5,3 +5,4 @@ import './js/quote.js';
 import './js/filters.js';
 import './js/footer-subscribe.js';
 import './js/pop-up-exercises.js';
+import './js/pop-up-rating.js';
