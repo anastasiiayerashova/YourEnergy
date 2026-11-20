@@ -140,7 +140,6 @@
   cursor: not-allowed;
 }
 
-/* ==================== TABLET+ ==================== */
 @media screen and (min-width: 768px) {
   .modal-rating {
     max-width: 430px;
