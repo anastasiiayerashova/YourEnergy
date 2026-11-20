@@ -23,7 +23,7 @@
   padding: 20px;
   display: flex;
   justify-content: center;
-  min-height: 209px;
+  min-height: 206px;
 }
 
 .favorites-running-man-icon-circle {
@@ -76,7 +76,7 @@
 }
 
 .favorites-quote-item-second {
-  min-height: 242px;
+  min-height: 119px;
 }
 
 .favorites-quote-item-second img {
@@ -134,13 +134,13 @@
     flex-direction: row;
     gap: 16px;
     flex-wrap: wrap;
-    row-gap: 32px;
   }
 
   .favorites-quote-item {
-    width: 400px;
-    min-height: 249px;
+    width: 704px;
+    min-height: 220px;
     padding: 40px;
+    justify-content: unset;
   }
 
   .favorites-running-man-icon-circle {
@@ -149,6 +149,7 @@
 
   .favorites-quote-author-container {
     gap: 6px;
+    margin-right: auto;
   }
 
   .favorites-quote-title {
@@ -163,8 +164,8 @@
   }
 
   .favorites-quote-item-second {
-    width: 288px;
-    min-height: 249px;
+    width: 344px;
+    min-height: 141px;
   }
 
   .favorites-quote-item-third {
@@ -193,15 +194,29 @@
     margin-bottom: 0;
   }
 
-  .favorites-quote-list {
+  /* .favorites-quote-list {
     flex-direction: column;
-    gap: 32px;
-    flex-wrap: nowrap;
   }
 
   .favorites-quote-item {
-    width: 444px;
-    min-height: 242px;
+    width: 494px;
+    min-height: 230px;
+    justify-content: center;
+  } */
+
+  .favorites-quote-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .favorites-quote-item {
+    grid-column: 1 / -1;
+    width: 494px;
+    min-height: 230px;
+  }
+
+  .favorites-quote-author-container {
+    margin-right: unset;
   }
 
   .favorites-quote-text {
@@ -209,8 +224,7 @@
   }
 
   .favorites-quote-item-second {
-    width: 444px;
-    min-height: 242px;
+    width: 239px;
   }
 
   .favorites-quote-item-third {
