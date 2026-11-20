@@ -7,9 +7,213 @@
   letter-spacing: -0.02em;
 }
 
+.favorites-first-container {
+  margin-bottom: 40px;
+}
+
+.favorites-quote-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.favorites-quote-item {
+  background-color: rgba(36, 36, 36, 1);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 209px;
+}
+
+.favorites-running-man-icon-circle {
+  background-color: rgba(244, 244, 244, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 32px;
+  margin-right: 20px;
+  padding: 7px;
+}
+
+.favorites-running-man-icon {
+  fill: var(--white-color);
+}
+
+.favorites-quote-author-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.favorites-quote-title {
+  color: rgba(244, 244, 244, 1);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.favorites-quote-text {
+  color: rgba(244, 244, 244, 0.6);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.29;
+  margin-bottom: 8px;
+}
+
+.favorites-quote-author {
+  color: rgba(244, 244, 244, 1);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.29;
+  margin-top: auto;
+}
+
+.favorites-inverted-commas-icon {
+  fill: var(--white-color);
+}
+
+.favorites-quote-item-second {
+  min-height: 242px;
+}
+
+.favorites-quote-item-second img {
+  border-radius: 20px;
+}
+
+.favorites-quote-item-third {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  min-height: 119px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.favorites-gym-icon {
+  fill: var(--black-color);
+}
+
+.favorites-quote-item-third-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.favorites-quote-item-third-number {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--black-color);
+  line-height: 1;
+}
+
+.favorites-quote-item-third-subtitle {
+  margin-bottom: 14px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  color: rgba(36, 36, 36, 0.6);
+}
+
+@media screen and (min-width: 768px) {
+  .title-favorites {
+    margin-bottom: 32px;
+    font-size: 44px;
+    line-height: 1.091em;
+    letter-spacing: -0.02em;
+  }
+
+  .favorites-first-container {
+    margin-bottom: 64px;
+  }
+
+  .favorites-quote-list {
+    flex-direction: row;
+    gap: 16px;
+    flex-wrap: wrap;
+    row-gap: 32px;
+  }
+
+  .favorites-quote-item {
+    width: 400px;
+    min-height: 249px;
+    padding: 40px;
+  }
+
+  .favorites-running-man-icon-circle {
+    margin-right: 16px;
+  }
+
+  .favorites-quote-author-container {
+    gap: 6px;
+  }
+
+  .favorites-quote-title {
+    font-size: 24px;
+    line-height: 1.33;
+  }
+
+  .favorites-quote-text {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .favorites-quote-item-second {
+    width: 288px;
+    min-height: 249px;
+  }
+
+  .favorites-quote-item-third {
+    width: 344px;
+    min-height: 141px;
+    padding: 25px;
+  }
+
+  .favorites-quote-item-third-number {
+    font-size: 24px;
+    line-height: 1.33;
+  }
+
+  .favorites-quote-item-third-subtitle {
+    margin-bottom: 18px;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   .favorites-main-container {
     display: flex;
     gap: 32px;
+  }
+
+  .favorites-first-container {
+    margin-bottom: 0;
+  }
+
+  .favorites-quote-list {
+    flex-direction: column;
+    gap: 32px;
+    flex-wrap: nowrap;
+  }
+
+  .favorites-quote-item {
+    width: 444px;
+    min-height: 242px;
+  }
+
+  .favorites-quote-text {
+    margin-bottom: 2px;
+  }
+
+  .favorites-quote-item-second {
+    width: 444px;
+    min-height: 242px;
+  }
+
+  .favorites-quote-item-third {
+    width: 239px;
   }
 }
