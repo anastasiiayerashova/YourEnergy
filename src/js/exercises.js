@@ -148,4 +148,6 @@ if (filtersContainer) {
 }
 
 
-loadFiltersData();
+if (filtersContainer) {
+  loadFiltersData();
+}
